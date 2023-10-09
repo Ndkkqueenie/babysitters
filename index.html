@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>BabySit</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-light-green w3-text-white w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>BabySit<br>Sisters</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Gallery</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
+    <a href="#babysitters" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">BabySitters</a> 
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-light-green w3-text-white w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-light-green w3-text-white w3-margin-right" onclick="w3_open()">☰</a>
+  <span>BabySit Sisters</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="gallery">
+    <h1 class="w3-jumbo"><b>BabySit Sisters</b></h1>
+    <h1 class="w3-xxxlarge w3-text-light-green"><b>Gallery.</b></h1>
+    <hr style="width:50px;border:5px solid greenyellow" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="./images/baby1.webp" style="width:100%" onclick="onClick(this)" alt="baby1">
+      <img src="./images/baby2.webp" style="width:100%" onclick="onClick(this)" alt="babys2">
+      <img src="./images/baby3.webp" style="width:100%" onclick="onClick(this)" alt="babys3">
+    </div>
+
+    <div class="w3-half">
+      <img src="./images/baby4.webp" style="width:100%" onclick="onClick(this)" alt="babys4">
+      <img src="./images/baby5.webp" style="width:100%" onclick="onClick(this)" alt="babys5">
+      <img src="./images/baby6.webp" style="width:100%" onclick="onClick(this)" alt="babys6">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-light-green"><b>Services.</b></h1>
+    <hr style="width:50px;border:5px solid greenyellow" class="w3-round">
+    <p>Our services encompass a wide range of essential aspects to ensure your child's well-being and happiness.</p>
+    <p>
+      We prioritize safety above all else, maintaining constant supervision and being well-versed in basic first aid and CPR. 
+      Your child's development and enjoyment are also central to our approach. 
+      We love fostering creativity through imaginative play, offering homework assistance when needed, and preparing wholesome meals that cater to dietary preferences. 
+      Whether it's playtime, bedtime, or transportation to activities, We are here to make your life easier and provide you with peace of mind knowing that your child is in capable and caring hands. 
+      Communication is key, and We keep you updated on your child's activities and well-being throughout my time with them and you can also monitors them through our temporary video service. 
+      Together, we can create a positive and enriching experience for your family.</p>
+  </div>
+  
+  <!-- Babysitters -->
+  <div class="w3-container" id="babysitters" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-light-green"><b>Babysitters.</b></h1>
+    <hr style="width:50px;border:5px solid greenyellow" class="w3-round">
+    <p>Most dedicated team.</p>
+    <p>
+      Our babysitters are here to make your life easier and ensure that your child receives the best care possible. 
+      We're dedicated to creating a safe and enjoyable experience for your family, allowing you to confidently entrust us with your child's care whenever you need it.
+    </p>
+    <p><b>Our team of professional & dedicated babysitters</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="./images/me2.jpeg" alt="Queendalin" style="width:100%">
+        <div class="w3-container">
+          <h3>E. Queendalin</h3>
+          <p class="w3-opacity">CEO & babysitter</p>
+          <p> Passionate childcarer, I understand the importance of building trust and rapport with both parents and children.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="./images/me2.jpeg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>O. Queendalin</h3>
+          <p class="w3-opacity">BabySitter</p>
+          <p>Dedicated babysitter, providing your child with a safe, nurturing, and engaging environment while you're away.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="./images/me2.jpeg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>M. Queendalin</h3>
+          <p class="w3-opacity">Childminder</p>
+          <p>My services encompass a wide range of essential aspects to ensure your child's well-being and happiness.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-light-green"><b>Babysitting Packages.</b></h1>
+    <hr style="width:50px;border:5px solid greenyellow" class="w3-round">
+    <p>
+      Whether you choose the Basic or Pro package, our dedicated babysitters are committed to delivering quality care and peace of mind for your family. 
+      Additional services can be customized to suit your specific needs, ensuring a tailored and comfortable experience for both parents and children.
+    </p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+        <li class="w3-padding-16">Supervision and Safety</li>
+        <li class="w3-padding-16">Playtime and Engagement</li>
+        <li class="w3-padding-16">Basic Meal Preparation</li>
+        <li class="w3-padding-16">Bedtime Routine (if applicable)</li>
+        <li class="w3-padding-16">Communication</li>
+        <li class="w3-padding-16">X</li>
+        <li class="w3-padding-16">X</li>
+        <li class="w3-padding-16">X</li>
+        <li class="w3-padding-16">
+          <h2>€ 12</h2>
+          <span class="w3-opacity">per hour</span>
+        </li>
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-light-green w3-text-white w3-xlarge w3-padding-32">Pro</li>
+        <li class="w3-padding-16">Supervision and Safety</li>
+        <li class="w3-padding-16">Playtime and Engagement</li>
+        <li class="w3-padding-16">Meal Preparation</li>
+        <li class="w3-padding-16">Homework Help</li>
+        <li class="w3-padding-16">Bedtime Routine</li>
+        <li class="w3-padding-16">Transportation</li>
+        <li class="w3-padding-16">Communication</li>
+        <li class="w3-padding-16">Flexibility</li>
+        <li class="w3-padding-16">
+          <h2>€ 18</h2>
+          <span class="w3-opacity">per hour</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-light-green"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid greenyellow" class="w3-round">
+    <p>Do you want us to take care of your young ones? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+    <form name="contact" target="_blank" method="POST" netlify>
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-light-green w3-text-white w3-margin-bottom">Send Message</button>
+    </form>  
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">❤️ <a href="https://queendalin-dev.netliyf.app" title="W3.CSS" target="_blank" class="w3-hover-opacity">Queendalin Ezenwa</a> 💡<a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script src="./js/modal.js" ></script>
+<script src="./js/sidebar.js" ></script>
+
+</body>
+</html>
